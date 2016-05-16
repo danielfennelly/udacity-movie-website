@@ -1,3 +1,8 @@
+
+"""
+fresh_tomatoes.py - a script for generating a movie trailers webpage
+"""
+
 import webbrowser
 import os
 import re
@@ -130,6 +135,7 @@ movie_tile_content = '''
 
 
 def create_movie_tiles_content(movies):
+    """Formats an html template string with data from movies collection"""
     # The HTML content for this section of the page
     content = ''
     for movie in movies:
@@ -151,6 +157,8 @@ def create_movie_tiles_content(movies):
 
 
 def open_movies_page(movies):
+    """Generates an html page from a list of Movie tuples and opens a webbrowser"""
+
     # Create or overwrite the output file
     output_file = open('fresh_tomatoes.html', 'w')
 
@@ -166,5 +174,5 @@ def open_movies_page(movies):
     url = os.path.abspath(output_file.name)
     webbrowser.open('file://' + url, new=2)
 
-if __name__ == "__main__":
-    open_movies_page(media.Movies)
+if __name__ == '__main__':
+    open_movies_page(media.read_movie_data('movie_data.tsv'))
