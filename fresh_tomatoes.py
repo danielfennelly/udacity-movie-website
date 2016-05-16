@@ -1,7 +1,7 @@
 import webbrowser
 import os
 import re
-
+import media
 
 # Styles and scripting for the page
 main_page_head = '''
@@ -123,7 +123,7 @@ main_page_content = '''
 # A single movie entry html template
 movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
-    <img src="{poster_image_url}" width="220" height="342">
+    <img src="img/{poster_image_url}" width="220" height="342">
     <h2>{movie_title}</h2>
 </div>
 '''
@@ -165,3 +165,6 @@ def open_movies_page(movies):
     # open the output file in the browser (in a new tab, if possible)
     url = os.path.abspath(output_file.name)
     webbrowser.open('file://' + url, new=2)
+
+if __name__ == "__main__":
+    open_movies_page(media.Movies)
