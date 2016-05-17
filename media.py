@@ -6,7 +6,10 @@ media.py - Provides a method for reading movie data and a container tuple
 from collections import namedtuple
 import csv
 
-
+# I chose to use a namedtuple in place of the Movie class used in the course
+# lectures. In my opinion, Movie shouldn't be concerned with how to show
+# it's own trailer. Instead, Movie should just be a container class used to
+# bundle together these attributes.
 Movie = namedtuple('Movie', ['title', 'storyline', 'poster_image_url',
                              'trailer_youtube_url'])
 
