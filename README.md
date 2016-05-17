@@ -4,7 +4,7 @@ This repository contains a simple movie trailers website written as an exercise 
 
 ## Usage
 
-Run `fresh_tomatoes.py' with Python. This code has been tested with Python versions 2.7.10 and 3.5.0., and there are no dependencies outside of the standard library.
+Run `fresh_tomatoes.py` with Python. This code has been tested with Python versions 2.7.10 and 3.5.0., and there are no dependencies outside of the standard library.
 
     $ python fresh_tomatoes.py
 
